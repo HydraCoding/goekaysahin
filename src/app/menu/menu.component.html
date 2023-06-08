@@ -1,11 +1,12 @@
-<header>
-  <div class="img-overlay">
-    <img src="assets/img/logo.png" />
-  </div>
-  <div>
-    <a href="#">Home</a>
-    <a href="#">Curriculum</a>
-    <a href="#">Projects</a>
-    <a href="#">Impressum</a>
+<header [class.headerDark]="darkMode">
+  <img *ngIf="!darkMode" routerLink="/" src="assets/img/logo_white.png" />
+  <img *ngIf="darkMode" routerLink="/" src="assets/img/logo_black.png" />
+
+  <div [class.darkLinks]="darkMode">
+    <a routerLink="/">Home</a>
+    <a routerLink="/data-protection">Data protection</a>
+    <!--  <a href="#">Curriculum</a>
+    <a href="#">Projects</a> -->
+    <a routerLink="/imprint">Imprint</a>
   </div>
 </header>
